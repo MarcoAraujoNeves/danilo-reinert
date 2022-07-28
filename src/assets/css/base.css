@@ -45,6 +45,16 @@ main h1 {
   font-size: 42px;
 }
 
+main p {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+  font-family: open sans, sans-serif;
+  text-align: justify;
+  color: #585757;
+}
+
 a {
   color: #42b883;
   font-weight: 500;
