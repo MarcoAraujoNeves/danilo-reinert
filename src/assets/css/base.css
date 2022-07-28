@@ -7,6 +7,11 @@
   outline: 0;
 }
 
+*::selection {
+  background: #42b883;
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -28,6 +33,19 @@ img {
 }
 
 main {
-  padding: 24px 32px;
+  width: 95%;
+  max-width: 1110px;
   min-height: calc(100vh - 98px - 488px);
+  margin: 0 auto;
+  padding: 24px 0 64px;
+}
+
+main h1 {
+  margin: 28px 0 20px;
+  font-size: 42px;
+}
+
+a {
+  color: #42b883;
+  font-weight: 500;
 }
