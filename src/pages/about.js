@@ -6,7 +6,7 @@ import { cover, subtitle, textBody } from '../assets/css/about.module.css'
 export default function About() {
   return (
     <Layout>
-      <h1>About</h1>
+      <h1>About me</h1>
 
       <img
         src="https://hannesdorfmann.com/images/about/lake.jpg"
@@ -33,10 +33,7 @@ export default function About() {
         <p>
           Nunc ut ipsum felis. Nam tristique libero mauris, mattis convallis
           enim volutpat at. <a href="#">Pellentesque</a> habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas. Cras
-          porttitor, massa quis elementum posuere, tortor lorem aliquet arcu,
-          eleifend pharetra lacus ipsum dapibus lorem. Ut sit amet lorem vitae
-          purus imperdiet efficitur quis tincidunt lacus. Suspendisse potenti.
+          tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
 
         <p>
