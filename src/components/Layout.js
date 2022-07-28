@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
-import '../styles/base.css'
+import '../assets/css/base.css'
 
 // eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {

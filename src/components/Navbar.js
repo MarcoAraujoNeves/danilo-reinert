@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import { header } from '../styles/navbar.module.css'
+import { header } from '../assets/css/navbar.module.css'
 
 const Navbar = () => {
   return (

@@ -10,7 +10,7 @@ import {
   column,
   columnsWrapper,
   badge,
-} from '../styles/footer.module.css'
+} from '../assets/css/footer.module.css'
 
 const Footer = () => {
   return (
