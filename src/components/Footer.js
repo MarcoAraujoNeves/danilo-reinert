@@ -57,7 +57,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className={copyrights}>Copyright © 2022 Danilo Reinert</div>
+      <div className={copyrights}>
+        Copyright &copy; {new Date().getFullYear()} Danilo Reinert
+      </div>
     </footer>
   )
 }
