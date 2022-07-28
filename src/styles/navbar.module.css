@@ -1,0 +1,33 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 18px 32px;
+}
+
+.header,
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header ul {
+  list-style: none;
+  gap: 16px;
+}
+
+.header a {
+  display: inline-block;
+  padding: 20px 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #35495e;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.header a:hover {
+  color: #42b883;
+}
