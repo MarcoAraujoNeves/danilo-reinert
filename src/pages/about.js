@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-import { cover, subtitle, textBody } from '../assets/css/about.module.css'
+import { cover, subtitle } from '../assets/css/about.module.css'
 
 export default function About() {
   return (
@@ -19,7 +19,7 @@ export default function About() {
         <strong>Danilo Reinert</strong>
       </h3>
 
-      <div className={textBody}>
+      <div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
           elementum, tortor nec vulputate molestie, leo enim tempus dolor, sit
