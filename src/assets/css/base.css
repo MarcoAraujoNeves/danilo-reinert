@@ -59,3 +59,8 @@ a {
   color: #42b883;
   font-weight: 500;
 }
+
+a.active-link {
+  color: #42b883;
+  font-weight: 600;
+}

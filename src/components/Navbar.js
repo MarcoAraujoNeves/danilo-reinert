@@ -1,5 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
+
 import { header } from '../assets/css/navbar.module.css'
 
 const Navbar = () => {
@@ -8,13 +9,27 @@ const Navbar = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">HOME</Link>
+            <Link to="/" className="nav-link" activeClassName="active-link">
+              HOME
+            </Link>
           </li>
           <li>
-            <Link to="/about">ABOUT</Link>
+            <Link
+              to="/about/"
+              className="nav-link"
+              activeClassName="active-link"
+            >
+              ABOUT
+            </Link>
           </li>
           <li>
-            <Link to="/contact">CONTACT</Link>
+            <Link
+              to="/contact/"
+              className="nav-link"
+              activeClassName="active-link"
+            >
+              CONTACT
+            </Link>
           </li>
         </ul>
       </nav>
