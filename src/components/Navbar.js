@@ -24,6 +24,15 @@ const Navbar = () => {
           </li>
           <li>
             <Link
+              to="/posts/"
+              className="nav-link"
+              activeClassName="active-link"
+            >
+              POSTS
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/contact/"
               className="nav-link"
               activeClassName="active-link"

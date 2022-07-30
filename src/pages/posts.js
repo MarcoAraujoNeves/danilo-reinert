@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-export default function Home() {
+export default function Posts() {
   return (
     <Layout>
-      <h1>Hello world!</h1>
+      <h1>All posts</h1>
     </Layout>
   )
 }
