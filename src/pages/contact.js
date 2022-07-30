@@ -2,6 +2,9 @@ import React from 'react'
 import Layout from '../components/Layout'
 
 import { contactWapper } from '../assets/css/contact.module.css'
+import GithubFillIcon from 'remixicon-react/GithubFillIcon'
+import LinkedinBoxFillIcon from 'remixicon-react/LinkedinBoxFillIcon'
+import TwitterFillIcon from 'remixicon-react/TwitterFillIcon'
 
 export default function Contact() {
   return (
@@ -26,6 +29,18 @@ export default function Contact() {
             Email:&nbsp;
             <a href="mailto:danilo.reinert@gmail.com">
               danilo.reinert@gmail.com
+            </a>
+          </p>
+
+          <p>
+            <a href="#">
+              <GithubFillIcon color="#35495e" size={24} />
+            </a>
+            <a href="#">
+              <LinkedinBoxFillIcon color="#35495e" size={24} />
+            </a>
+            <a href="#">
+              <TwitterFillIcon color="#35495e" size={24} />
             </a>
           </p>
         </div>
