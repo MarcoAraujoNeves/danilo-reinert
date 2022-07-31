@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Post from '../components/Post'
+import PostCard from '../components/PostCard'
 
 import { postsWrapper } from '../assets/css/posts.module.css'
 
@@ -77,7 +77,7 @@ export default function Posts() {
 
       <div className={postsWrapper}>
         {posts.map((post, index) => (
-          <Post key={index} index={index} post={post} />
+          <PostCard key={index} index={index} post={post} />
         ))}
       </div>
     </Layout>

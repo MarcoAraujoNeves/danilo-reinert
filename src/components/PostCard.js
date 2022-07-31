@@ -9,7 +9,7 @@ import {
   postDate,
 } from '../assets/css/posts.module.css'
 
-const Post = ({ index, post }) => {
+const PostCard = ({ index, post }) => {
   return (
     <div className={`${postCard} ${index === 0 ? firstPost : ''}`}>
       <img src={post.cover} alt="" />
@@ -31,4 +31,4 @@ const Post = ({ index, post }) => {
   )
 }
 
-export default Post
+export default PostCard

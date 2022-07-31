@@ -4,7 +4,7 @@ import GithubFillIcon from 'remixicon-react/GithubFillIcon'
 import LinkedinBoxFillIcon from 'remixicon-react/LinkedinBoxFillIcon'
 import TwitterFillIcon from 'remixicon-react/TwitterFillIcon'
 import Layout from '../components/Layout'
-import Post from '../components/Post'
+import PostCard from '../components/PostCard'
 
 import { postsWrapper } from '../assets/css/posts.module.css'
 import {
@@ -94,7 +94,7 @@ export default function Home() {
 
         <div className={postsWrapper}>
           {posts.map((post, index) => (
-            <Post key={index} post={post} />
+            <PostCard key={index} post={post} />
           ))}
         </div>
 
