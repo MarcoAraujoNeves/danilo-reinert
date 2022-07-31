@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
-
-import { contactWapper } from '../assets/css/contact.module.css'
 import GithubFillIcon from 'remixicon-react/GithubFillIcon'
 import LinkedinBoxFillIcon from 'remixicon-react/LinkedinBoxFillIcon'
 import TwitterFillIcon from 'remixicon-react/TwitterFillIcon'
+
+import { contactWapper } from '../assets/css/contact.module.css'
 
 export default function Contact() {
   return (
@@ -12,11 +12,7 @@ export default function Contact() {
       <h1>Contact me</h1>
 
       <div className={contactWapper}>
-        <img
-          src="https://hannesdorfmann.com/images/contact.jpg"
-          alt=""
-          className=""
-        />
+        <img src="https://hannesdorfmann.com/images/contact.jpg" alt="" />
 
         <div>
           <p>
