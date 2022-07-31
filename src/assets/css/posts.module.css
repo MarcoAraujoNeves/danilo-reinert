@@ -61,23 +61,23 @@
   font-weight: 500;
 }
 
-.post-card:first-child {
+.post-card.first-post {
   grid-column: 1 / -1;
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
 }
 
-.post-card:first-child img {
+.post-card.first-post img {
   width: 50%;
 }
 
-.post-card:first-child h3 {
+.post-card.first-post h3 {
   font-size: 32px;
   margin: 8px 0 16px;
 }
 
-.post-card:first-child p {
+.post-card.first-post p {
   font-size: 18px;
   line-height: 1.8;
 }

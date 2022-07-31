@@ -1,11 +1,17 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { postCard, postBody, postDate } from '../assets/css/posts.module.css'
+import {
+  firstPost,
+  postCard,
+  postBody,
+  postDate,
+} from '../assets/css/posts.module.css'
 
-const Post = () => {
+// eslint-disable-next-line react/prop-types
+const Post = ({ index }) => {
   return (
-    <div className={postCard}>
+    <div className={`${postCard} ${index === 0 ? firstPost : ''}`}>
       <img src="https://hannesdorfmann.com/images/contact.jpg" alt="" />
 
       <div className={postBody}>

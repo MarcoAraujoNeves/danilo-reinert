@@ -10,7 +10,7 @@ export default function Posts() {
       <h1>All posts</h1>
 
       <div className={postsWrapper}>
-        <Post />
+        <Post index={0} />
         <Post />
         <Post />
         <Post />
