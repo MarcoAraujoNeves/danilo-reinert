@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { Link } from 'gatsby'
 
@@ -8,28 +9,23 @@ import {
   postDate,
 } from '../assets/css/posts.module.css'
 
-// eslint-disable-next-line react/prop-types
-const Post = ({ index }) => {
+const Post = ({ index, post }) => {
   return (
     <div className={`${postCard} ${index === 0 ? firstPost : ''}`}>
-      <img src="https://hannesdorfmann.com/images/contact.jpg" alt="" />
+      <img src={post.cover} alt="" />
 
       <div className={postBody}>
         <p className={postDate}>
-          <span>Java</span>
+          <span>{post.tag}</span>
           &nbsp;&bull;&nbsp;
-          <span>November 15, 2022</span>
+          <span>{post.date}</span>
         </p>
 
-        <Link to="/">
-          <h3>Post tile comes here</h3>
+        <Link to="#">
+          <h3>{post.title}</h3>
         </Link>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          elementum, tortor nec vulputate molestie, leo enim tempus dolor, sit
-          amet pretium nisl lacus a orci.
-        </p>
+        <p>{post.description}</p>
       </div>
     </div>
   )
