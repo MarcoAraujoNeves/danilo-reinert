@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { defineCustomElements } from '@deckdeckgo/highlight-code/dist/loader'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+
+defineCustomElements()
 
 const BlogPostTemplate = ({
   data: { previous, next, markdownRemark: post },

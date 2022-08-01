@@ -13,6 +13,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-highlight-code',
+            options: {
+              terminal: 'none',
+            },
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 730,

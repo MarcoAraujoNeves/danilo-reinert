@@ -14,10 +14,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^4.3.0",
     "gatsby": "^4.19.2",
     "gatsby-plugin-catch-links": "^4.19.0",
     "gatsby-plugin-sharp": "^4.19.0",
     "gatsby-remark-autolink-headers": "^5.19.0",
+    "gatsby-remark-highlight-code": "^3.2.0",
     "gatsby-remark-images": "^6.19.0",
     "gatsby-source-filesystem": "^4.19.0",
     "gatsby-transformer-remark": "^5.19.0",
