@@ -40,19 +40,61 @@ main {
   padding: 24px 0 64px;
 }
 
-main h1 {
+main h1,
+main .post-content h2,
+main .post-content h3,
+main .post-content h4,
+main .post-content h5,
+main .post-content h6 {
   margin: 28px 0 20px;
+}
+
+main h1 {
   font-size: 42px;
 }
 
-main p {
-  margin-bottom: 16px;
+main h2 {
+  font-size: 34px;
+}
+
+main h3 {
+  font-size: 29px;
+}
+
+main h4 {
+  font-size: 26px;
+}
+
+main h5 {
+  font-size: 23px;
+}
+
+main h6 {
+  font-size: 20px;
+}
+
+.anchor.before {
+  padding-right: 8px;
+}
+
+.anchor.before path {
+  fill: #585757;
+}
+
+main p,
+main li {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.8;
   font-family: open sans, sans-serif;
   text-align: justify;
   color: #585757;
+}
+
+main p,
+main ul,
+main ol {
+  margin-bottom: 16px;
 }
 
 a {

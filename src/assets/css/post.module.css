@@ -1,0 +1,8 @@
+.post-date-category {
+  text-transform: capitalize;
+}
+
+.post-article ul,
+.post-article ol {
+  margin-left: 21px;
+}

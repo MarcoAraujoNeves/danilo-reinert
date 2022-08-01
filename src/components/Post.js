@@ -6,6 +6,9 @@ import { defineCustomElements } from '@deckdeckgo/highlight-code/dist/loader'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
+import { postDate } from '../assets/css/posts.module.css'
+import { postArticle, postDateCategory } from '../assets/css/post.module.css'
+
 defineCustomElements()
 
 const BlogPostTemplate = ({
@@ -13,13 +16,21 @@ const BlogPostTemplate = ({
 }) => {
   return (
     <Layout>
-      <article>
-        <header>
+      <article className={postArticle}>
+        <section>
           <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
 
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <p className={`${postDate} ${postDateCategory}`}>
+            <span>{post.frontmatter.category}</span>
+            &nbsp;&bull;&nbsp;
+            <span>{post.frontmatter.date}</span>
+          </p>
+        </section>
+
+        <section
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </article>
 
       <nav>
@@ -82,6 +93,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        category
+        cover
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

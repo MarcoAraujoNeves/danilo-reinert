@@ -7,7 +7,7 @@ import { postsWrapper } from '../assets/css/posts.module.css'
 export default function Posts() {
   const posts = [
     {
-      tag: 'Java',
+      category: 'Java',
       date: 'November 15, 2022',
       title: 'Post title comes here',
       cover:
@@ -16,7 +16,7 @@ export default function Posts() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor purus vitae pellentesque dapibus. Nullam sollicitudin euismod tellus. ',
     },
     {
-      tag: 'Cloud',
+      category: 'Cloud',
       date: 'September 30, 2022',
       title: 'Lorem ipsum dolor sit',
       cover:
@@ -25,7 +25,7 @@ export default function Posts() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor purus vitae pellentesque dapibus. Nullam sollicitudin euismod tellus. ',
     },
     {
-      tag: 'HTTP',
+      category: 'HTTP',
       date: 'August 6, 2022',
       title: 'This is a client app',
       cover:
@@ -34,7 +34,7 @@ export default function Posts() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor purus vitae pellentesque dapibus. Nullam sollicitudin euismod tellus. ',
     },
     {
-      tag: 'CCA',
+      category: 'CCA',
       date: 'July 31, 2022',
       title: 'Another title',
       cover:
@@ -43,7 +43,7 @@ export default function Posts() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor purus vitae pellentesque dapibus. Nullam sollicitudin euismod tellus. ',
     },
     {
-      tag: 'Spring',
+      category: 'Spring',
       date: 'July 15, 2022',
       title: 'Another title',
       cover:
@@ -52,7 +52,7 @@ export default function Posts() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor purus vitae pellentesque dapibus. Nullam sollicitudin euismod tellus. ',
     },
     {
-      tag: 'JAX-RS',
+      category: 'JAX-RS',
       date: 'June 30, 2022',
       title: 'Another title',
       cover:
@@ -61,7 +61,7 @@ export default function Posts() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor purus vitae pellentesque dapibus. Nullam sollicitudin euismod tellus. ',
     },
     {
-      tag: 'Maven',
+      category: 'Maven',
       date: 'June 25, 2022',
       title: 'Another title',
       cover:

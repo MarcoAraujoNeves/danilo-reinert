@@ -16,7 +16,7 @@ const PostCard = ({ index, post }) => {
 
       <div className={postBody}>
         <p className={postDate}>
-          <span>{post.tag}</span>
+          <span>{post.category}</span>
           &nbsp;&bull;&nbsp;
           <span>{post.date}</span>
         </p>
