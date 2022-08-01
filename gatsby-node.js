@@ -50,12 +50,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const component = path.resolve('./src/components/Post.js')
+  console.log('\nGenerating blog posts:')
 
   posts.forEach((post, index) => {
     const previousPostId = index === 0 ? null : posts[index - 1].id
     const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
-    console.log(`Creating blog page: ${post.fields.slug}`)
+    console.log(`[${index + 1}/${posts.length}]: ${post.fields.slug}`)
 
     createPage({
       path: post.fields.slug,
@@ -67,4 +68,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+
+  console.log('')
 }
