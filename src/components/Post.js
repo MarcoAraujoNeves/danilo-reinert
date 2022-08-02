@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import { defineCustomElements } from '@deckdeckgo/highlight-code/dist/loader'
 
 import Layout from '../components/Layout'
@@ -11,23 +12,22 @@ import {
   postArticle,
   postDateCategory,
   postContent,
-  coverImage,
 } from '../assets/css/post.module.css'
-import coverImageSource from '../assets/images/hello-image-cover.jpeg'
 
 defineCustomElements()
 
 const BlogPostTemplate = ({
-  data: { previous, next, markdownRemark: post },
+  data: { previous, next, markdownRemark: post, file },
 }) => {
   return (
     <Layout>
       <article className={postArticle}>
         <section>
-          <img
-            src={coverImageSource}
+          <Img
+            fluid={file.childImageSharp.fluid}
+            objectFit="cover"
+            objectPosition="50% 50%"
             alt={`${post.frontmatter.title} blog post cover.`}
-            className={coverImage}
           />
 
           <h1>{post.frontmatter.title}</h1>
@@ -91,6 +91,7 @@ export const pageQuery = graphql`
     $id: String!
     $previousPostId: String
     $nextPostId: String
+    $cover: String
   ) {
     site {
       siteMetadata {
@@ -108,6 +109,13 @@ export const pageQuery = graphql`
         category
         cover
         tags
+      }
+    }
+    file(relativePath: { eq: $cover }) {
+      childImageSharp {
+        fluid(maxWidth: 1600, maxHeight: 800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
