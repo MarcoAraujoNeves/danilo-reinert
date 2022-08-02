@@ -40,12 +40,7 @@ main {
   padding: 24px 0 64px;
 }
 
-main h1,
-main .post-content h2,
-main .post-content h3,
-main .post-content h4,
-main .post-content h5,
-main .post-content h6 {
+main h1 {
   margin: 28px 0 20px;
 }
 

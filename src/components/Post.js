@@ -7,7 +7,13 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
 import { postDate } from '../assets/css/posts.module.css'
-import { postArticle, postDateCategory } from '../assets/css/post.module.css'
+import {
+  postArticle,
+  postDateCategory,
+  postContent,
+  coverImage,
+} from '../assets/css/post.module.css'
+import coverImageSource from '../assets/images/hello-image-cover.jpeg'
 
 defineCustomElements()
 
@@ -18,6 +24,12 @@ const BlogPostTemplate = ({
     <Layout>
       <article className={postArticle}>
         <section>
+          <img
+            src={coverImageSource}
+            alt={`${post.frontmatter.title} blog post cover.`}
+            className={coverImage}
+          />
+
           <h1>{post.frontmatter.title}</h1>
 
           <p className={`${postDate} ${postDateCategory}`}>
@@ -28,7 +40,7 @@ const BlogPostTemplate = ({
         </section>
 
         <section
-          className="post-content"
+          className={postContent}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </article>

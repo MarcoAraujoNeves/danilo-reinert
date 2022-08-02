@@ -1,10 +1,11 @@
+const path = require('path')
+
 module.exports = {
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        // eslint-disable-next-line n/no-path-concat
-        path: `${__dirname}/posts`,
+        path: path.join(__dirname, 'posts'),
         name: 'blog',
       },
     },
