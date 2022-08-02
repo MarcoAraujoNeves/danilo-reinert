@@ -12,6 +12,18 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaults: {
+          formats: ['auto', 'webp'],
+          placeholder: 'blurred',
+          quality: 95,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: 'transparent',
+        },
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: path.join(__dirname, 'src', 'assets', 'images'),
@@ -26,6 +38,7 @@ module.exports = {
             resolve: 'gatsby-remark-highlight-code',
             options: {
               terminal: 'none',
+              lineNumbers: true,
             },
           },
           {
@@ -39,23 +52,5 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-sharp',
-    //   options: {
-    //     defaults: {
-    //       formats: ['auto', 'webp'],
-    //       placeholder: 'blurred',
-    //       quality: 95,
-    //       breakpoints: [750, 1080, 1366, 1920],
-    //       backgroundColor: 'transparent',
-    //       tracedSVGOptions: {},
-    //       blurredOptions: {},
-    //       jpgOptions: {},
-    //       pngOptions: {},
-    //       webpOptions: {},
-    //       avifOptions: {},
-    //     },
-    //   },
-    // },
   ],
 }
