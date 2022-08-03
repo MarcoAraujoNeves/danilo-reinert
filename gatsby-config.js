@@ -1,6 +1,14 @@
 const path = require('path')
 
 module.exports = {
+  siteMetadata: {
+    title: 'Danilo Reinert',
+    description:
+      'Lorem ipsum dolor sit amet ipsum dolor sit amet lorem dolor sit amet.',
+    twitterUsername: '@daniloreinert',
+    image: '/danilo-reinert.jpeg',
+    siteUrl: 'https://www.daniloreinert.com',
+  },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',

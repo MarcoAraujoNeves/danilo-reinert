@@ -88,11 +88,13 @@ const BlogPostTemplate = ({
   )
 }
 
-export const Head = ({ data: { markdownRemark: post } }) => {
+export const Head = ({ data: { markdownRemark: post, file, page } }) => {
   return (
     <SEO
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
+      pathname={page.fields.slug}
+      cover={file.childImageSharp.fluid.src}
     />
   )
 }
@@ -129,6 +131,11 @@ export const pageQuery = graphql`
         fluid(maxWidth: 1600, maxHeight: 800) {
           ...GatsbyImageSharpFluid_withWebp
         }
+      }
+    }
+    page: markdownRemark(id: { eq: $id }) {
+      fields {
+        slug
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
