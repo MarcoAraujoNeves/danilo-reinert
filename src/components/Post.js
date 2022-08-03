@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
 import { postDate } from '../assets/css/posts.module.css'
+import { badge } from '../assets/css/footer.module.css'
 import {
   postArticle,
   postDateCategory,
@@ -37,6 +38,18 @@ const BlogPostTemplate = ({
             &nbsp;&bull;&nbsp;
             <span>{post.frontmatter.date}</span>
           </p>
+
+          {post.frontmatter.tags ? (
+            <div>
+              {post.frontmatter.tags.map(tag => (
+                <span key={tag} className={badge}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          ) : (
+            false
+          )}
         </section>
 
         <section
