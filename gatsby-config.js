@@ -10,7 +10,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-sharp',
       options: {
@@ -44,7 +43,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 730,
+              maxWidth: 1110,
             },
           },
           'gatsby-remark-autolink-headers',

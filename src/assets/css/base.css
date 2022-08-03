@@ -12,6 +12,11 @@
   color: #fff;
 }
 
+:root {
+  --deckgo-highlight-code-background: #f9f9f9;
+  --deckgo-highlight-code-padding: 16px;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -100,9 +105,4 @@ a {
 a.active-link {
   color: #42b883;
   font-weight: 600;
-}
-
-:root {
-  --deckgo-highlight-code-background: #f9f9f9;
-  --deckgo-highlight-code-padding: 16px;
 }
