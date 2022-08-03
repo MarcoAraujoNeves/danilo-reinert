@@ -1,6 +1,8 @@
 import { Link } from 'gatsby'
 import React from 'react'
+
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 import {
   errorNumber,
@@ -22,3 +24,5 @@ export default function NotFound() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Page not found" />

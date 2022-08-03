@@ -1,6 +1,8 @@
 import React from 'react'
+
 import Layout from '../components/Layout'
 import PostCard from '../components/PostCard'
+import SEO from '../components/SEO'
 
 import { postsWrapper } from '../assets/css/posts.module.css'
 
@@ -83,3 +85,5 @@ export default function Posts() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Posts" />

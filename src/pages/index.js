@@ -3,8 +3,10 @@ import { Link } from 'gatsby'
 import GithubFillIcon from 'remixicon-react/GithubFillIcon'
 import LinkedinBoxFillIcon from 'remixicon-react/LinkedinBoxFillIcon'
 import TwitterFillIcon from 'remixicon-react/TwitterFillIcon'
+
 import Layout from '../components/Layout'
 import PostCard from '../components/PostCard'
+import SEO from '../components/SEO'
 
 import { postsWrapper } from '../assets/css/posts.module.css'
 import {
@@ -107,3 +109,5 @@ export default function Home() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO />

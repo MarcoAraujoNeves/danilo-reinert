@@ -1,5 +1,7 @@
 import React from 'react'
+
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 import { cover, subtitle } from '../assets/css/about.module.css'
 
@@ -74,3 +76,5 @@ export default function About() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="About me" />

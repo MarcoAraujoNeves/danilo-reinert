@@ -1,8 +1,10 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import GithubFillIcon from 'remixicon-react/GithubFillIcon'
 import LinkedinBoxFillIcon from 'remixicon-react/LinkedinBoxFillIcon'
 import TwitterFillIcon from 'remixicon-react/TwitterFillIcon'
+
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 import { contactWapper } from '../assets/css/contact.module.css'
 
@@ -44,3 +46,5 @@ export default function Contact() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Contact me" />
