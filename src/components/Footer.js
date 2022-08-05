@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import FacebookBoxFillIcon from 'remixicon-react/FacebookBoxFillIcon'
 import GithubFillIcon from 'remixicon-react/GithubFillIcon'
 import TwitterFillIcon from 'remixicon-react/TwitterFillIcon'
@@ -13,27 +14,59 @@ import {
 } from '../assets/css/footer.module.css'
 
 const Footer = () => {
+  const data = useStaticQuery(
+    graphql`
+      query allCategoriesAndTags {
+        allMarkdownRemark {
+          nodes {
+            frontmatter {
+              category
+              tags
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const categories = data.allMarkdownRemark.nodes.reduce((acc, post) => {
+    if (!acc.includes(post.frontmatter.category)) {
+      acc.push(post.frontmatter.category)
+    }
+
+    return acc
+  }, [])
+
+  const tags = data.allMarkdownRemark.nodes
+    .flatMap(post => post.frontmatter.tags)
+    .reduce((acc, tag) => {
+      if (!acc.includes(tag)) {
+        acc.push(tag)
+      }
+
+      return acc
+    }, [])
+
   return (
     <footer className={footer}>
       <div className={columnsWrapper}>
         <div className={column}>
           <h3>Categories</h3>
 
-          <span className={badge}>Backend</span>
-          <span className={badge}>Java</span>
-          <span className={badge}>Server-Side-Rendering</span>
-          <span className={badge}>Node.js</span>
+          {categories.map(category => (
+            <span key={category} className={badge}>
+              {category}
+            </span>
+          ))}
         </div>
         <div className={column}>
           <h3>Tags</h3>
 
-          <span className={badge}>servers</span>
-          <span className={badge}>cloud-computing</span>
-          <span className={badge}>software-engineering</span>
-          <span className={badge}>algorithms</span>
-          <span className={badge}>data-structures</span>
-          <span className={badge}>optimization</span>
-          <span className={badge}>entrepreneurship</span>
+          {tags.map(tag => (
+            <span key={tag} className={badge}>
+              {tag}
+            </span>
+          ))}
         </div>
         <div className={column}>
           <h3>Social Media</h3>
