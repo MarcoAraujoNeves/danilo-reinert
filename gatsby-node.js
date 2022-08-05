@@ -29,6 +29,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               cover
+              category
+              tags
             }
           }
         }
@@ -69,6 +71,38 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         previousPostId,
         nextPostId,
         cover: post.frontmatter.cover,
+      },
+    })
+  })
+
+  console.log('')
+
+  const categories = posts.reduce((acc, post) => {
+    if (!acc.includes(post.frontmatter.category)) {
+      acc.push(post.frontmatter.category)
+    }
+
+    return acc
+  }, [])
+
+  if (categories.length > 0) {
+    console.log('\nGenerating category pages:')
+  }
+
+  const categoryComponent = path.resolve('./src/components/Category.js')
+
+  categories.forEach((category, index) => {
+    const categoryPath = `/category/${category
+      .toLowerCase()
+      .replace(/ /g, '-')}/`
+
+    console.log(`[${index + 1}/${categories.length}]: ${categoryPath}`)
+
+    createPage({
+      path: categoryPath,
+      component: categoryComponent,
+      context: {
+        category,
       },
     })
   })
