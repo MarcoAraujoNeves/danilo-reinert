@@ -22,6 +22,11 @@
   transition: all 0.1s;
 }
 
+.image-container {
+  width: 100%;
+  max-width: 500px;
+}
+
 .post-card img {
   display: block;
   max-width: 100%;
@@ -59,6 +64,7 @@
   margin: 0;
   opacity: 0.6;
   font-weight: 500;
+  text-transform: capitalize;
 }
 
 .post-card.first-post {
@@ -66,10 +72,6 @@
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
-}
-
-.post-card.first-post img {
-  width: 50%;
 }
 
 .post-card.first-post h3 {

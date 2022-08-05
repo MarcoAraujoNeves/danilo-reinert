@@ -1,18 +1,27 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import {
   firstPost,
   postCard,
   postBody,
+  imageContainer,
   postDate,
 } from '../assets/css/posts.module.css'
 
 const PostCard = ({ index, post }) => {
   return (
     <div className={`${postCard} ${index === 0 ? firstPost : ''}`}>
-      <img src={post.cover} alt="" />
+      <div className={`${imageContainer}`}>
+        <Img
+          fluid={post.coverFluid}
+          objectFit="cover"
+          objectPosition="50% 50%"
+          alt={`${post.title} blog post cover.`}
+        />
+      </div>
 
       <div className={postBody}>
         <p className={postDate}>
@@ -21,7 +30,7 @@ const PostCard = ({ index, post }) => {
           <span>{post.date}</span>
         </p>
 
-        <Link to="#">
+        <Link to={post.path}>
           <h3>{post.title}</h3>
         </Link>
 
