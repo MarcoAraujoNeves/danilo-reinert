@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import GithubFillIcon from 'remixicon-react/GithubFillIcon'
 import LinkedinBoxFillIcon from 'remixicon-react/LinkedinBoxFillIcon'
 import TwitterFillIcon from 'remixicon-react/TwitterFillIcon'
@@ -18,36 +19,16 @@ import {
   morePosts,
 } from '../assets/css/home.module.css'
 
-export default function Home() {
-  const posts = [
-    {
-      category: 'Java',
-      date: 'November 15, 2022',
-      title: 'Post title comes here',
-      cover:
-        'https://images.unsplash.com/photo-1502462041640-b3d7e50d0662?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor purus vitae pellentesque dapibus. Nullam sollicitudin euismod tellus. ',
-    },
-    {
-      category: 'Cloud',
-      date: 'September 30, 2022',
-      title: 'Lorem ipsum dolor sit',
-      cover:
-        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor purus vitae pellentesque dapibus. Nullam sollicitudin euismod tellus. ',
-    },
-    {
-      category: 'HTTP',
-      date: 'August 6, 2022',
-      title: 'This is a client app',
-      cover:
-        'https://images.unsplash.com/photo-1555952494-efd681c7e3f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor purus vitae pellentesque dapibus. Nullam sollicitudin euismod tellus. ',
-    },
-  ]
+export default function Home({
+  data: { allMarkdownRemark: posts, allImageSharp },
+}) {
+  const getCoverFluid = (images, cover) => {
+    const filteredArray = images.nodes.filter(({ fluid }) =>
+      fluid.src.includes(cover)
+    )
+
+    return filteredArray[0].fluid
+  }
 
   return (
     <Layout>
@@ -95,8 +76,15 @@ export default function Home() {
         <h2>Latest posts</h2>
 
         <div className={postsWrapper}>
-          {posts.map((post, index) => (
-            <PostCard key={index} post={post} />
+          {posts.nodes.map(({ frontmatter, fields }, index) => (
+            <PostCard
+              key={index}
+              post={{
+                ...frontmatter,
+                path: fields.slug,
+                coverFluid: getCoverFluid(allImageSharp, frontmatter.cover),
+              }}
+            />
           ))}
         </div>
 
@@ -111,3 +99,33 @@ export default function Home() {
 }
 
 export const Head = () => <SEO />
+
+export const pageQuery = graphql`
+  query LatestBlogPosts {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
+    ) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date(formatString: "MMMM DD, YYYY")
+          description
+          category
+          cover
+          tags
+        }
+      }
+    }
+    allImageSharp {
+      nodes {
+        fluid(maxWidth: 1600, maxHeight: 800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
