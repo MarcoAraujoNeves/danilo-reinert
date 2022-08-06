@@ -20,6 +20,10 @@ defineCustomElements()
 const BlogPostTemplate = ({
   data: { previous, next, markdownRemark: post, file },
 }) => {
+  const getPath = (type, value) => {
+    return `/${type}/${value.toLowerCase().replace(/ /g, '-')}`
+  }
+
   return (
     <Layout>
       <article className={postArticle}>
@@ -34,7 +38,9 @@ const BlogPostTemplate = ({
           <h1>{post.frontmatter.title}</h1>
 
           <p className={`${postDate} ${postDateCategory}`}>
-            <span>{post.frontmatter.category}</span>
+            <Link to={getPath('category', post.frontmatter.category)}>
+              <span>{post.frontmatter.category}</span>
+            </Link>
             &nbsp;&bull;&nbsp;
             <span>{post.frontmatter.date}</span>
           </p>
@@ -42,9 +48,9 @@ const BlogPostTemplate = ({
           {post.frontmatter.tags ? (
             <div>
               {post.frontmatter.tags.map(tag => (
-                <span key={tag} className={badge}>
-                  {tag}
-                </span>
+                <Link key={tag} to={getPath('tag', tag)}>
+                  <span className={badge}>{tag}</span>
+                </Link>
               ))}
             </div>
           ) : (

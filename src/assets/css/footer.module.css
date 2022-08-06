@@ -37,7 +37,7 @@
   transition: all 0.1s;
 }
 
-.column a .badge:hover {
+a .badge:hover {
   color: #42b883;
   text-decoration: underline;
 }
