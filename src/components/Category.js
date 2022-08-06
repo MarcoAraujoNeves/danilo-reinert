@@ -44,8 +44,8 @@ function Category({
   )
 }
 
-export const Head = ({ category }) => {
-  return <SEO title={`Blog posts about ${category}`} />
+export const Head = ({ pageContext }) => {
+  return <SEO title={`Blog posts about ${pageContext.category}`} />
 }
 
 export default Category

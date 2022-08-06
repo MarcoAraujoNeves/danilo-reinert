@@ -44,8 +44,8 @@ function Tag({
   )
 }
 
-export const Head = ({ tag }) => {
-  return <SEO title={`Blog posts about ${tag}`} />
+export const Head = ({ pageContext }) => {
+  return <SEO title={`Blog posts about ${pageContext.tag}`} />
 }
 
 export default Tag
