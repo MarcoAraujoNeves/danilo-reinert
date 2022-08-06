@@ -108,4 +108,36 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   console.log('')
+
+  const tags = posts
+    .flatMap(post => post.frontmatter.tags)
+    .reduce((acc, tag) => {
+      if (!acc.includes(tag)) {
+        acc.push(tag)
+      }
+
+      return acc
+    }, [])
+
+  if (tags.length > 0) {
+    console.log('\nGenerating tag pages:')
+  }
+
+  const tagComponent = path.resolve('./src/components/Tag.js')
+
+  tags.forEach((tag, index) => {
+    const tagPath = `/tag/${tag.toLowerCase().replace(/ /g, '-')}/`
+
+    console.log(`[${index + 1}/${tags.length}]: ${tagPath}`)
+
+    createPage({
+      path: tagPath,
+      component: tagComponent,
+      context: {
+        tag,
+      },
+    })
+  })
+
+  console.log('')
 }
