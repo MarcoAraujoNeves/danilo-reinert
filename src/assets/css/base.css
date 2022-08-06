@@ -53,6 +53,10 @@ main h1 {
   font-size: 42px;
 }
 
+main h1 span {
+  text-transform: capitalize;
+}
+
 main h2 {
   font-size: 34px;
 }
