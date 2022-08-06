@@ -33,9 +33,16 @@
   border-radius: 15px;
   padding: 4px 12px;
   border: 1px solid #e9e9e9;
+  text-decoration: none;
+  transition: all 0.1s;
 }
 
-.column a {
+.column a .badge:hover {
+  color: #42b883;
+  text-decoration: underline;
+}
+
+.column .social-link {
   width: max-content;
   padding: 4px;
   margin: 0 auto;
