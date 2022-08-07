@@ -3,23 +3,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from './Layout'
-import PostCard from './PostCard'
+import PostsWrapper from './PostsWrapper'
 import SEO from './SEO'
-
-import { postsWrapper } from '../assets/css/posts.module.css'
 
 function Category({
   pageContext,
   data: { allMarkdownRemark: posts, allImageSharp },
 }) {
-  const getCoverFluid = (images, cover) => {
-    const filteredArray = images.nodes.filter(({ fluid }) =>
-      fluid.src.includes(cover)
-    )
-
-    return filteredArray[0].fluid
-  }
-
   return (
     <Layout>
       <h1>
@@ -27,19 +17,11 @@ function Category({
         <span>{pageContext.category}</span>
       </h1>
 
-      <div className={postsWrapper}>
-        {posts.nodes.map(({ frontmatter, fields }, index) => (
-          <PostCard
-            key={index}
-            index={index}
-            post={{
-              ...frontmatter,
-              path: fields.slug,
-              coverFluid: getCoverFluid(allImageSharp, frontmatter.cover),
-            }}
-          />
-        ))}
-      </div>
+      <PostsWrapper
+        posts={posts}
+        allImageSharp={allImageSharp}
+        highlightFirst={false}
+      />
     </Layout>
   )
 }

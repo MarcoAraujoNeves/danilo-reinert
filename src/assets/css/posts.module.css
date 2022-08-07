@@ -67,19 +67,19 @@
   text-transform: capitalize;
 }
 
-.post-card.first-post {
+.post-card.highlighted-post {
   grid-column: 1 / -1;
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
 }
 
-.post-card.first-post h3 {
+.post-card.highlighted-post h3 {
   font-size: 32px;
   margin: 8px 0 16px;
 }
 
-.post-card.first-post p {
+.post-card.highlighted-post p {
   font-size: 18px;
   line-height: 1.8;
 }

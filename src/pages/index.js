@@ -7,10 +7,9 @@ import LinkedinBoxFillIcon from 'remixicon-react/LinkedinBoxFillIcon'
 import TwitterFillIcon from 'remixicon-react/TwitterFillIcon'
 
 import Layout from '../components/Layout'
-import PostCard from '../components/PostCard'
+import PostsWrapper from '../components/PostsWrapper'
 import SEO from '../components/SEO'
 
-import { postsWrapper } from '../assets/css/posts.module.css'
 import {
   heroWrapper,
   heroRow,
@@ -23,14 +22,6 @@ import {
 export default function Home({
   data: { allMarkdownRemark: posts, allImageSharp, file },
 }) {
-  const getCoverFluid = (images, cover) => {
-    const filteredArray = images.nodes.filter(({ fluid }) =>
-      fluid.src.includes(cover)
-    )
-
-    return filteredArray[0].fluid
-  }
-
   return (
     <Layout>
       <div className={heroWrapper}>
@@ -78,18 +69,11 @@ export default function Home({
       <div className={latestPosts}>
         <h2>Latest posts</h2>
 
-        <div className={postsWrapper}>
-          {posts.nodes.map(({ frontmatter, fields }, index) => (
-            <PostCard
-              key={index}
-              post={{
-                ...frontmatter,
-                path: fields.slug,
-                coverFluid: getCoverFluid(allImageSharp, frontmatter.cover),
-              }}
-            />
-          ))}
-        </div>
+        <PostsWrapper
+          posts={posts}
+          allImageSharp={allImageSharp}
+          highlightFirst={false}
+        />
 
         <div className={morePosts}>
           <p>

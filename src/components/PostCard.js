@@ -4,16 +4,16 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 import {
-  firstPost,
+  highlightedPost,
   postCard,
   postBody,
   imageContainer,
   postDate,
 } from '../assets/css/posts.module.css'
 
-const PostCard = ({ index, post }) => {
+const PostCard = ({ highlighted, post }) => {
   return (
-    <div className={`${postCard} ${index === 0 ? firstPost : ''}`}>
+    <div className={`${postCard} ${highlighted ? highlightedPost : ''}`}>
       <div className={`${imageContainer}`}>
         <Img
           fluid={post.coverFluid}

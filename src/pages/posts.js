@@ -3,39 +3,21 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import PostCard from '../components/PostCard'
+import PostsWrapper from '../components/PostsWrapper'
 import SEO from '../components/SEO'
-
-import { postsWrapper } from '../assets/css/posts.module.css'
 
 export default function Posts({
   data: { allMarkdownRemark: posts, allImageSharp },
 }) {
-  const getCoverFluid = (images, cover) => {
-    const filteredArray = images.nodes.filter(({ fluid }) =>
-      fluid.src.includes(cover)
-    )
-
-    return filteredArray[0].fluid
-  }
-
   return (
     <Layout>
       <h1>All posts</h1>
 
-      <div className={postsWrapper}>
-        {posts.nodes.map(({ frontmatter, fields }, index) => (
-          <PostCard
-            key={index}
-            index={index}
-            post={{
-              ...frontmatter,
-              path: fields.slug,
-              coverFluid: getCoverFluid(allImageSharp, frontmatter.cover),
-            }}
-          />
-        ))}
-      </div>
+      <PostsWrapper
+        posts={posts}
+        allImageSharp={allImageSharp}
+        highlightFirst={true}
+      />
     </Layout>
   )
 }
