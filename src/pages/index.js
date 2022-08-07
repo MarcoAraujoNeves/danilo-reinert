@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 import GithubFillIcon from 'remixicon-react/GithubFillIcon'
 import LinkedinBoxFillIcon from 'remixicon-react/LinkedinBoxFillIcon'
 import TwitterFillIcon from 'remixicon-react/TwitterFillIcon'
@@ -20,7 +21,7 @@ import {
 } from '../assets/css/home.module.css'
 
 export default function Home({
-  data: { allMarkdownRemark: posts, allImageSharp },
+  data: { allMarkdownRemark: posts, allImageSharp, file },
 }) {
   const getCoverFluid = (images, cover) => {
     const filteredArray = images.nodes.filter(({ fluid }) =>
@@ -64,9 +65,11 @@ export default function Home({
           </div>
 
           <div className={heroImageWrapper}>
-            <img
-              src="https://hannesdorfmann.com/images/about/hannes-banner-800.png"
-              alt=""
+            <Img
+              fluid={file.childImageSharp.fluid}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt="Home page hero image."
             />
           </div>
         </div>
@@ -102,6 +105,13 @@ export const Head = () => <SEO />
 
 export const pageQuery = graphql`
   query LatestBlogPosts {
+    file(relativePath: { eq: "hero.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, maxHeight: 1017) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 3

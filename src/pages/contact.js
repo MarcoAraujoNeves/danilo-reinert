@@ -1,4 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import GithubFillIcon from 'remixicon-react/GithubFillIcon'
 import LinkedinBoxFillIcon from 'remixicon-react/LinkedinBoxFillIcon'
 import TwitterFillIcon from 'remixicon-react/TwitterFillIcon'
@@ -8,13 +11,20 @@ import SEO from '../components/SEO'
 
 import { contactWapper } from '../assets/css/contact.module.css'
 
-export default function Contact() {
+export default function Contact({ data: { file } }) {
   return (
     <Layout>
       <h1>Contact me</h1>
 
       <div className={contactWapper}>
-        <img src="https://hannesdorfmann.com/images/contact.jpg" alt="" />
+        <div>
+          <Img
+            fluid={file.childImageSharp.fluid}
+            objectFit="cover"
+            objectPosition="50% 50%"
+            alt="Contact me page image."
+          />
+        </div>
 
         <div>
           <p>
@@ -48,3 +58,15 @@ export default function Contact() {
 }
 
 export const Head = () => <SEO title="Contact me" />
+
+export const pageQuery = graphql`
+  query ContactPageImage {
+    file(relativePath: { eq: "contact.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 640, maxHeight: 427) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

@@ -1,19 +1,23 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
-import { cover, subtitle } from '../assets/css/about.module.css'
+import { subtitle } from '../assets/css/about.module.css'
 
-export default function About() {
+export default function About({ data: { file } }) {
   return (
     <Layout>
       <h1>About me</h1>
 
-      <img
-        src="https://hannesdorfmann.com/images/about/lake.jpg"
-        alt=""
-        className={cover}
+      <Img
+        fluid={file.childImageSharp.fluid}
+        objectFit="cover"
+        objectPosition="50% 50%"
+        alt="About me page cover."
       />
 
       <h3 className={subtitle}>
@@ -78,3 +82,15 @@ export default function About() {
 }
 
 export const Head = () => <SEO title="About me" />
+
+export const pageQuery = graphql`
+  query AboutPageImage {
+    file(relativePath: { eq: "about.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1110, maxHeight: 800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
