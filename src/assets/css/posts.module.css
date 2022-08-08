@@ -83,3 +83,10 @@
   font-size: 18px;
   line-height: 1.8;
 }
+
+.no-matches {
+  font-size: 32px;
+  font-weight: 400;
+  grid-column: 1 / -1;
+  text-align: center;
+}

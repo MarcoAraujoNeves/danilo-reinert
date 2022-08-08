@@ -8,15 +8,20 @@ import SEO from '../components/SEO'
 
 export default function Posts({
   data: { allMarkdownRemark: posts, allImageSharp },
+  location,
 }) {
+  const params = new URLSearchParams(location.search)
+  const search = params.get('search') && params.get('search').toLowerCase()
+
   return (
     <Layout>
-      <h1>All posts</h1>
+      <h1>{search ? `Results for "${search}"` : 'All posts'}</h1>
 
       <PostsWrapper
         posts={posts}
         allImageSharp={allImageSharp}
-        highlightFirst={true}
+        highlightFirst={!search}
+        search={search}
       />
     </Layout>
   )
