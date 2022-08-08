@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
+:root {
+  --primary-color: #42b883;
+  --primary-color-darker: #33a06f;
+  --secondary-color: #35475e;
+
+  --light-background-color: #fff;
+  --light-background-color-soft: #f9f9f9;
+  --light-navlink-text-color: #35475e;
+  --light-heading-text-color: #000;
+  --light-body-text-color: #585757;
+  --light-badge-text-color: #505050;
+  --light-badge-border-color: #e9e9e9;
+
+  --dark-background-color: #181a1b;
+  --dark-background-color-soft: #1b1e1f;
+  --dark-navlink-text-color: #a6bbcd;
+  --dark-heading-text-color: #e8e6e3;
+  --dark-body-text-color: #b1aaa0;
+  --dark-badge-text-color: #b5afa6;
+  --dark-badge-border-color: #363b3d;
+
+  --deckgo-highlight-code-background: #f9f9f9;
+  --deckgo-highlight-code-padding: 16px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,13 +33,8 @@
 }
 
 *::selection {
-  background: #42b883;
+  background: var(--primary-color);
   color: #fff;
-}
-
-:root {
-  --deckgo-highlight-code-background: #f9f9f9;
-  --deckgo-highlight-code-padding: 16px;
 }
 
 html {
@@ -77,12 +97,21 @@ main h6 {
   font-size: 20px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--light-heading-text-color);
+}
+
 .anchor.before {
   padding-right: 8px;
 }
 
 .anchor.before path {
-  fill: #585757;
+  fill: var(--light-body-text-color);
 }
 
 main p,
@@ -92,7 +121,7 @@ main li {
   line-height: 1.8;
   font-family: open sans, sans-serif;
   text-align: justify;
-  color: #585757;
+  color: var(--light-body-text-color);
 }
 
 main p,
@@ -101,12 +130,12 @@ main ol {
   margin-bottom: 16px;
 }
 
-a {
-  color: #42b883;
+a,
+a.active-link {
+  color: var(--primary-color);
   font-weight: 500;
 }
 
 a.active-link {
-  color: #42b883;
   font-weight: 600;
 }

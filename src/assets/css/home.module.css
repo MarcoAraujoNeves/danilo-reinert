@@ -2,7 +2,10 @@
   width: 99.4vw;
   position: relative;
   left: calc((100vw - 100%) / (-2));
-  background-image: linear-gradient(#fff 45%, #f9f9f9 0);
+  background-image: linear-gradient(
+    var(--light-background-color) 45%,
+    var(--light-background-color-soft) 0
+  );
 }
 
 .hero-row {
@@ -62,7 +65,7 @@
   height: 5px;
   width: 75px;
   border-radius: 3px;
-  background-color: #35495e;
+  background-color: var(--secondary-color);
 }
 
 .more-posts p {

@@ -22,11 +22,11 @@
   padding: 20px 15px;
   font-size: 17px;
   font-weight: 400;
-  color: #35495e;
+  color: var(--secondary-color);
   text-decoration: none;
   transition: all 0.15s;
 }
 
 .header a:hover {
-  color: #42b883;
+  color: var(--primary-color);
 }

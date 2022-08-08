@@ -9,7 +9,7 @@
 }
 
 .post-date-category a:hover {
-  color: #42b883;
+  color: var(--primary-color);
   text-decoration: underline;
 }
 

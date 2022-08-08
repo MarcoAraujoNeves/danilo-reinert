@@ -39,19 +39,19 @@
 }
 
 .post-body a {
-  color: #35495e;
   text-decoration: none;
   transition: all 0.1s;
 }
 
-.post-body a:hover {
-  color: #42b883;
-  text-decoration: underline;
-}
-
 .post-body h3 {
+  color: var(--secondary-color);
   margin-bottom: 6px;
   font-size: 20px;
+}
+
+.post-body a:hover h3 {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
 .post-body p {
