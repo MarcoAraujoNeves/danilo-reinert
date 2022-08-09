@@ -3,6 +3,10 @@
   z-index: 2;
   width: 100%;
   padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 .header,
@@ -62,4 +66,11 @@
 
 .search-wrapper button:hover {
   background-color: var(--primary-color-darker);
+}
+
+.toggle-theme-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

@@ -23,15 +23,6 @@
   --dark-badge-text-color: #b5afa6;
   --dark-badge-border-color: #363b3d;
 
-  --background-color: var(--light-background-color);
-  --background-color-soft: var(--light-background-color-soft);
-  --navlink-text-color: var(--light-navlink-text-color);
-  --heading-link-color: var(--light-heading-link-color);
-  --heading-text-color: var(--light-heading-text-color);
-  --body-text-color: var(--light-body-text-color);
-  --badge-text-color: var(--light-badge-text-color);
-  --badge-border-color: var(--light-badge-border-color);
-
   --deckgo-highlight-code-background: #f9f9f9;
   --deckgo-highlight-code-padding: 16px;
 }

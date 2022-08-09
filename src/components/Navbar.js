@@ -1,14 +1,25 @@
-import React, { useState } from 'react'
+/* eslint-disable react/prop-types */
+import React, { useState, useContext } from 'react'
 import { Link, navigate } from 'gatsby'
 import SearchLineIcon from 'remixicon-react/SearchLineIcon'
+import MoonClearFillIcon from 'remixicon-react/MoonClearFillIcon'
+import SunFillIcon from 'remixicon-react/SunFillIcon'
 
-import { header, searchWrapper } from '../assets/css/navbar.module.css'
+import { ThemeContext } from '../contexts/ThemeContext'
 
-const Navbar = () => {
-  const params = new URLSearchParams(location.search)
-  const searchValue = params.get('search') && params.get('search').toLowerCase()
+import {
+  header,
+  searchWrapper,
+  toggleThemeButton,
+} from '../assets/css/navbar.module.css'
+
+const Navbar = ({ location }) => {
+  const params = location && new URLSearchParams(location.search)
+  const searchValue =
+    params && params.get('search') && params.get('search').toLowerCase()
 
   const [search, setSearch] = useState(searchValue || '')
+  const { colorMode, setColorMode } = useContext(ThemeContext)
 
   const handleSearch = event => {
     event.preventDefault()
@@ -54,6 +65,21 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+
+      {colorMode ? (
+        <button
+          className={toggleThemeButton}
+          onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}
+        >
+          {colorMode === 'light' ? (
+            <SunFillIcon color="#35475e" size={18} />
+          ) : (
+            <MoonClearFillIcon color="#a6bbcd" size={18} />
+          )}
+        </button>
+      ) : (
+        false
+      )}
 
       <form className={searchWrapper} onSubmit={handleSearch}>
         <input
