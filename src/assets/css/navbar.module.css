@@ -22,11 +22,44 @@
   padding: 20px 15px;
   font-size: 17px;
   font-weight: 400;
-  color: var(--secondary-color);
+  color: var(--navlink-text-color);
   text-decoration: none;
   transition: all 0.15s;
 }
 
 .header a:hover {
   color: var(--primary-color);
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin-left: 16px;
+  padding: 4px 4px 4px 8px;
+  border: 2px solid var(--primary-color);
+  border-radius: 2px;
+}
+
+.search-wrapper input {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: var(--body-text-color);
+}
+
+.search-wrapper button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.search-wrapper button:hover {
+  background-color: var(--primary-color-darker);
 }

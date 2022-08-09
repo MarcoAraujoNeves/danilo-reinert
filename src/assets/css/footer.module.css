@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--light-background-color-soft);
+  background-color: var(--background-color-soft);
 }
 
 .footer div {
@@ -8,6 +8,7 @@
 
 .copyrights {
   text-align: center;
+  color: var(--body-text-color);
   border-top: 1px solid #e2e2e2;
 }
 
@@ -28,11 +29,11 @@
 .badge {
   display: inline-block;
   margin: 2px;
-  background-color: var(--light-background-color);
-  color: var(--light-badge-text-color);
+  background-color: var(--background-color);
+  color: var(--badge-text-color);
   border-radius: 15px;
   padding: 4px 12px;
-  border: 1px solid var(--light-badge-border-color);
+  border: 1px solid var(--badge-border-color);
   text-decoration: none;
   transition: all 0.1s;
 }
@@ -53,5 +54,5 @@ a .badge:hover {
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
-  color: var(--light-badge-text-color);
+  color: var(--badge-text-color);
 }

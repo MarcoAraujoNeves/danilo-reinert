@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, navigate } from 'gatsby'
 import SearchLineIcon from 'remixicon-react/SearchLineIcon'
 
-import { header } from '../assets/css/navbar.module.css'
+import { header, searchWrapper } from '../assets/css/navbar.module.css'
 
 const Navbar = () => {
   const params = new URLSearchParams(location.search)
@@ -55,7 +55,7 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      <form onSubmit={handleSearch}>
+      <form className={searchWrapper} onSubmit={handleSearch}>
         <input
           type="text"
           placeholder="Search"
@@ -64,7 +64,7 @@ const Navbar = () => {
         />
 
         <button type="submit">
-          <SearchLineIcon color="#42b883" size={16} />
+          <SearchLineIcon color="#ffffff" size={14} />
         </button>
       </form>
     </header>

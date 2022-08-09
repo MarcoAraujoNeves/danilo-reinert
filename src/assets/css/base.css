@@ -8,6 +8,7 @@
   --light-background-color: #fff;
   --light-background-color-soft: #f9f9f9;
   --light-navlink-text-color: #35475e;
+  --light-heading-link-color: #35475e;
   --light-heading-text-color: #000;
   --light-body-text-color: #585757;
   --light-badge-text-color: #505050;
@@ -16,10 +17,20 @@
   --dark-background-color: #181a1b;
   --dark-background-color-soft: #1b1e1f;
   --dark-navlink-text-color: #a6bbcd;
+  --dark-heading-link-color: #e8e6e3;
   --dark-heading-text-color: #e8e6e3;
   --dark-body-text-color: #b1aaa0;
   --dark-badge-text-color: #b5afa6;
   --dark-badge-border-color: #363b3d;
+
+  --background-color: var(--light-background-color);
+  --background-color-soft: var(--light-background-color-soft);
+  --navlink-text-color: var(--light-navlink-text-color);
+  --heading-link-color: var(--light-heading-link-color);
+  --heading-text-color: var(--light-heading-text-color);
+  --body-text-color: var(--light-body-text-color);
+  --badge-text-color: var(--light-badge-text-color);
+  --badge-border-color: var(--light-badge-border-color);
 
   --deckgo-highlight-code-background: #f9f9f9;
   --deckgo-highlight-code-padding: 16px;
@@ -51,6 +62,7 @@ body {
 
 body {
   font-size: 1.6rem;
+  background-color: var(--background-color);
 }
 
 img {
@@ -103,7 +115,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--light-heading-text-color);
+  color: var(--heading-text-color);
 }
 
 .anchor.before {
@@ -111,7 +123,7 @@ h6 {
 }
 
 .anchor.before path {
-  fill: var(--light-body-text-color);
+  fill: var(--body-text-color);
 }
 
 main p,
@@ -121,7 +133,7 @@ main li {
   line-height: 1.8;
   font-family: open sans, sans-serif;
   text-align: justify;
-  color: var(--light-body-text-color);
+  color: var(--body-text-color);
 }
 
 main p,
@@ -134,6 +146,12 @@ a,
 a.active-link {
   color: var(--primary-color);
   font-weight: 500;
+  transition: all 0.15s;
+}
+
+a:hover,
+a.active-link:hover {
+  color: var(--primary-color-darker);
 }
 
 a.active-link {
