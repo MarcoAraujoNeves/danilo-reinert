@@ -10,12 +10,13 @@
 
 .hero-row {
   display: flex;
+  justify-content: space-between;
   max-width: 1110px;
   margin: 0 auto;
 }
 
 .hero-content-wrapper {
-  width: 50%;
+  width: 45%;
 }
 
 .hero-content-wrapper svg {
@@ -36,11 +37,11 @@
 
 .hero-image-wrapper {
   width: 50%;
+  max-width: 475px;
 }
 
 .hero-image-wrapper img {
   display: block;
-  max-height: 575px;
   margin: 0 auto;
 }
 
