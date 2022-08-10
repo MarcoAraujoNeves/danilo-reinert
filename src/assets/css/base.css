@@ -23,8 +23,12 @@
   --dark-badge-text-color: #b5afa6;
   --dark-badge-border-color: #363b3d;
 
-  --deckgo-highlight-code-background: #f9f9f9;
   --deckgo-highlight-code-padding: 16px;
+  --deckgo-highlight-code-border-radius: 4px;
+  --deckgo-highlight-code-background: var(--background-color-soft);
+  --deckgo-highlight-code-color: var(--body-text-color);
+  --deckgo-highlight-code-line-numbers-color: var(--body-text-color);
+  --deckgo-highlight-code-line-background: var(--body-text-color);
 }
 
 * {
@@ -147,4 +151,8 @@ a.active-link:hover {
 
 a.active-link {
   font-weight: 600;
+}
+
+.gatsby-resp-image-image {
+  border-radius: 4px;
 }
