@@ -2,8 +2,12 @@
   background-color: var(--background-color-soft);
 }
 
-.footer div {
-  padding: 48px 32px;
+.copyrights,
+.columns-wrapper {
+  width: 95%;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 48px 0;
 }
 
 .copyrights {
@@ -14,12 +18,14 @@
 
 .columns-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .column {
-  flex-basis: 33%;
+  flex-basis: 32%;
   text-align: center;
+  min-width: 220px;
 }
 
 .column h3 {
@@ -55,4 +61,20 @@ a .badge:hover {
   font-size: 16px;
   font-weight: 400;
   color: var(--badge-text-color);
+}
+
+@media (max-width: 709px) {
+  .columns-wrapper {
+    justify-content: center;
+  }
+
+  .column:last-child {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 478px) {
+  .column:nth-child(2) {
+    margin-top: 48px;
+  }
 }
