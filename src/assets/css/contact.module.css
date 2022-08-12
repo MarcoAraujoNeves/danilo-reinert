@@ -14,3 +14,17 @@
 .contact-wapper p a {
   margin-right: 10px;
 }
+
+@media (max-width: 665px) {
+  .contact-wapper {
+    flex-direction: column;
+  }
+
+  .contact-wapper div:first-child {
+    max-width: 665px;
+  }
+
+  .contact-wapper p:last-child {
+    text-align: center;
+  }
+}
