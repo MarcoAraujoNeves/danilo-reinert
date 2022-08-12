@@ -1,5 +1,5 @@
 .hero-wrapper {
-  width: 99.4vw;
+  width: 100vw;
   position: relative;
   left: calc((100vw - 100%) / (-2));
   background-image: linear-gradient(
@@ -11,6 +11,7 @@
 .hero-row {
   display: flex;
   justify-content: space-between;
+  width: 95%;
   max-width: 1110px;
   margin: 0 auto;
 }
@@ -72,4 +73,24 @@
 .more-posts p {
   margin-top: 36px;
   text-align: center;
+}
+
+@media (max-width: 992px) {
+  .hero-row {
+    flex-direction: column;
+  }
+
+  .hero-content-wrapper,
+  .hero-image-wrapper {
+    width: 100%;
+  }
+
+  .hero-content-wrapper h1 {
+    margin-top: 48px;
+  }
+
+  .hero-image-wrapper {
+    max-width: 550px;
+    margin: 0 auto;
+  }
 }
