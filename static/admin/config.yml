@@ -4,28 +4,28 @@ backend:
   branch: publishing
 
 publish_mode: editorial_workflow
-media_folder: "/src/assets/images"
-public_folder: "../src/assets/images"
+media_folder: '/src/assets/images'
+public_folder: '../src/assets/images'
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "/posts/"
+  - name: 'blog'
+    label: 'Blog'
+    folder: '/posts/'
     create: true
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
       - {
-          label: "Cover Image",
-          name: "cover",
+          label: 'Cover Image',
+          name: 'cover',
           choose_url: false,
-          widget: "image",
-          media_folder: "/assets/images",
+          widget: 'image',
+          media_folder: '/src/assets/images',
         }
-      - { label: "Tags", name: "tags", widget: "list", default: ["blogging"] }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Category", name: "category", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Category', name: 'category', widget: 'string' }
+      - { label: 'Tags', name: 'tags', widget: 'list', default: ['blogging'] }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
