@@ -17,6 +17,7 @@ module.exports = {
         name: 'blog',
       },
     },
+    'gatsby-plugin-netlify-cms',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-sharp',
