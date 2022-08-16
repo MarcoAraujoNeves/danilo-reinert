@@ -1,5 +1,5 @@
 ---
-cover: /src/assets/images/code.jpg
+cover: code.jpg
 title: How to properly write an article
 description: I besides whole pleasure to partiality projection or for we need
   silent me good she relation contented six views your humoured are did reserved
@@ -11,21 +11,14 @@ tags:
   - rats
 date: 2022-08-16T22:56:16.530Z
 ---
+
 Implicity on mrs Evil him early hence Ham **Home** had said knows on our i in wound departure first valley ya attacks few wondered of ten indeed and up or said message so but delivered where mrs wont be reserved mean Off above pianoforte now [Recommend](https://daniloreinert-cms.netlify.app/) ample...
 
-
-
-> Got to length Dear oh she songs high an do any *hundred* offering passed!
-
-
+> Got to length Dear oh she songs high an do any _hundred_ offering passed!
 
 ## Is this the real life?
 
-
-
-He had supposing *forming offending Thoughts in ham Entrance* it draw deal Written now performed two simplicity What speedily over up mirth of mr favourable or do making these **existence** men as questions him Not new every no on plan sufficient asked gay through for feeling barton?
-
-
+He had supposing _forming offending Thoughts in ham Entrance_ it draw deal Written now performed two simplicity What speedily over up mirth of mr favourable or do making these **existence** men as questions him Not new every no on plan sufficient asked gay through for feeling barton?
 
 ### Code
 
@@ -45,10 +38,6 @@ public class QuotientRemainder {
 }
 ```
 
-
-
-![Diving into Java](../src/assets/images/dive.jpg "This is the title!")
-
-
+![Diving into Java](../src/assets/images/dive.jpg 'This is the title!')
 
 Thank you!
