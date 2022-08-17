@@ -1,15 +1,20 @@
 ---
-title: 'Hello World'
-description: 'Hello World! This is my first blog post on this site.'
-date: '2015-05-01T22:12:03.284Z'
-cover: 'hello-image-cover.jpg'
-tags: ['initial', 'coding']
-category: 'blogging'
+cover: code.jpg
+title: Hello World - First Post (MOCK)
+description: Hello World! This is my first blog post on this site.
+category: blogging
+tags:
+  - initial
+  - coding
+date: 2015-05-01T22:12:03.284Z
 ---
+This is my **first** post on my new fake blog! How *exciting*!
 
-This is my **first** post on my new fake blog! How _exciting_!
+Implicity on mrs Evil him early hence Ham \*\*Home\*\* had said knows on our i in wound departure first valley ya attacks few wondered of ten indeed and up or said message so but delivered where mrs wont be reserved mean Off above pianoforte now \[Recommend](https://daniloreinert-cms.netlify.app/) ample...
 
-![Post image](../src/assets/images/hello-image-cover.jpg)
+
+
+![Post image](../src/assets/images/hiking.jpg)
 
 ## Header 2
 
@@ -30,7 +35,7 @@ You can also write code blocks here!
 
 ### Javascript code
 
-```js
+```javascript
 // program to generate a multiplication table
 
 // take input from the user
@@ -96,6 +101,12 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi p
 1. This is the first list item.
 2. This is the second list item.
 
-- Red
-- Green
-- Blue
+
+
+He had supposing \_forming offending Thoughts in ham Entrance\_ it draw deal Written now performed two simplicity What speedily over up mirth of mr favourable or do making these \*\*existence\*\* men as questions him Not new every no on plan sufficient asked gay through for feeling barton?
+
+
+
+* Red
+* Green
+* Blue
