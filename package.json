@@ -18,6 +18,7 @@
     "gatsby": "^4.19.2",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-catch-links": "^4.19.0",
+    "gatsby-plugin-google-gtag": "^4.21.0",
     "gatsby-plugin-sharp": "^4.19.0",
     "gatsby-remark-autolink-headers": "^5.19.0",
     "gatsby-remark-highlight-code": "^3.2.0",

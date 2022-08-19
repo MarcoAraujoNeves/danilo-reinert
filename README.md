@@ -263,3 +263,23 @@ Por outro lado, pode ser necessário inserir opções de customização, inicial
 ```
 
 Para utilização, basta seguir a documentação específica do plugin.
+
+## Gatsby Plugin GTAG
+
+Para incluir tracking via Google Analytics, basta criar uma métrica e substituir o ID da mesma na configuração do plugin, no arquivo `./gatsby-config.js`:
+
+```
+  ...
+  plugins: [
+    ...
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: ['G-XXXXXXXXXX'],
+        ...
+      }
+    },
+    ...
+  ]
+  ...
+```
