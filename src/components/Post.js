@@ -15,8 +15,6 @@ import {
   postContent,
 } from '../assets/css/post.module.css'
 
-defineCustomElements()
-
 const BlogPostTemplate = ({
   data: { previous, next, markdownRemark: post, file },
 }) => {
@@ -25,6 +23,7 @@ const BlogPostTemplate = ({
   }
 
   useEffect(() => {
+    defineCustomElements()
     const tabbedCodeBlocks = document.querySelectorAll('.tabbed-code')
 
     if (tabbedCodeBlocks.length > 0) {
