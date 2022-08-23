@@ -39,8 +39,60 @@ public class QuotientRemainder {
 
 
 
+<div id="tabs-1" class="tabbed-code" active="0">
+
+
+
+<div class="code-tab" language="Java">
+
+
+
+\`\``java
+
+System.out.println(&quot;Fibonacci Series till &quot; + n + &quot; terms:&quot;);
+
+\`\``
+
+
+
+</div>
+
+
+
+<div class="code-tab" language="Python">
+
+\`\``python
+
+if test == True
+
+\`\``
+
+
+
+</div>
+
+
+
+<div class="code-tab" language="Javascript">
+
+
+
+\`\``javascript
+
+console.log('debug')
+
+\`\``
+
+
+
+</div>
+
+
+
+</div>
+
+
+
 ![Java library.](../src/assets/images/kenny-eliason-uecskkdb1pg-unsplash.jpg "Java library text!")
-
-
 
 Thank you!
