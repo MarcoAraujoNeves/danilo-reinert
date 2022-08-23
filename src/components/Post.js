@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { defineCustomElements } from '@deckdeckgo/highlight-code/dist/loader'
@@ -23,6 +23,30 @@ const BlogPostTemplate = ({
   const getPath = (type, value) => {
     return `/${type}/${value.toLowerCase().replace(/ /g, '-')}`
   }
+
+  useEffect(() => {
+    const tabbedCodeBlocks = document.querySelectorAll('.tabbed-code')
+
+    if (tabbedCodeBlocks.length > 0) {
+      for (const tabbedCodeBlock of tabbedCodeBlocks) {
+        const codeBlocks = [...tabbedCodeBlock.childNodes].filter(
+          element => element.localName && element.localName.includes('div')
+        )
+
+        let tabsbar = ``
+
+        for (const [index, codeBlock] of codeBlocks.entries()) {
+          const toggleStatement = `event.target.parentNode.parentNode.attributes.active.value = ${index}`
+          tabsbar += `<button onclick="${toggleStatement}">${codeBlock.attributes.language.value}</button>`
+        }
+
+        const tabsbarElement = document.createElement('section')
+        tabsbarElement.innerHTML = tabsbar
+
+        tabbedCodeBlock.prepend(tabsbarElement)
+      }
+    }
+  }, [])
 
   return (
     <Layout>

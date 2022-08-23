@@ -8,11 +8,38 @@ tags:
   - coding
 date: 2015-05-01T22:12:03.284Z
 ---
-This is my **first** post on my new fake blog! How *exciting*!
+
+<div id="tabs-1" class="tabbed-code" active="0">
+
+<div class="code-tab" language="Java">
+
+```java
+System.out.println(&quot;Fibonacci Series till &quot; + n + &quot; terms:&quot;);
+```
+
+</div>
+
+<div class="code-tab" language="Python">
+
+```python
+if test == True
+```
+
+</div>
+
+<div class="code-tab" language="Javascript">
+
+```javascript
+console.log('debug')
+```
+
+</div>
+
+</div>
+
+This is my **first** post on my new fake blog! How _exciting_!
 
 Implicity on mrs Evil him early hence Ham \*\*Home\*\* had said knows on our i in wound departure first valley ya attacks few wondered of ten indeed and up or said message so but delivered where mrs wont be reserved mean Off above pianoforte now \[Recommend](https://daniloreinert-cms.netlify.app/) ample...
-
-
 
 ![Post image](../src/assets/images/hiking.jpg)
 
@@ -101,12 +128,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi p
 1. This is the first list item.
 2. This is the second list item.
 
-
-
 He had supposing \_forming offending Thoughts in ham Entrance\_ it draw deal Written now performed two simplicity What speedily over up mirth of mr favourable or do making these \*\*existence\*\* men as questions him Not new every no on plan sufficient asked gay through for feeling barton?
 
-
-
-* Red
-* Green
-* Blue
+- Red
+- Green
+- Blue

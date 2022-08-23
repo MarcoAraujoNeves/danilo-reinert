@@ -123,7 +123,8 @@ h6 {
 }
 
 main p,
-main li {
+main li,
+.tabbed-code section button {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.8;
@@ -156,4 +157,70 @@ a.active-link {
 
 .gatsby-resp-image-image {
   border-radius: 4px;
+}
+
+.tabbed-code {
+  position: relative;
+}
+
+.tabbed-code .code-tab {
+  display: none;
+  position: relative;
+  top: -14px;
+}
+
+.tabbed-code[active='0'] .code-tab:first-of-type {
+  display: initial;
+}
+
+.tabbed-code[active='1'] .code-tab:nth-of-type(2) {
+  display: initial;
+}
+
+.tabbed-code[active='2'] .code-tab:nth-of-type(3) {
+  display: initial;
+}
+
+.tabbed-code[active='3'] .code-tab:nth-of-type(4) {
+  display: initial;
+}
+
+.tabbed-code[active='0'] section button:first-of-type {
+  color: var(--navlink-text-color);
+}
+
+.tabbed-code[active='1'] section button:nth-of-type(2) {
+  color: var(--navlink-text-color);
+}
+
+.tabbed-code[active='2'] section button:nth-of-type(3) {
+  color: var(--navlink-text-color);
+}
+
+.tabbed-code[active='3'] section button:nth-of-type(4) {
+  color: var(--navlink-text-color);
+}
+
+.tabbed-code section {
+  background: var(--background-color-soft);
+  border-top-left-radius: var(--deckgo-highlight-code-border-radius);
+  border-top-right-radius: var(--deckgo-highlight-code-border-radius);
+  padding: 8px 16px;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.tabbed-code section button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tabbed-code section button:hover {
+  opacity: 0.6;
 }
