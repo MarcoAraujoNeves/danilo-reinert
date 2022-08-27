@@ -73,7 +73,7 @@ console.log('debug')
 
 ### Java/Kotlin:
 
-<div id="tabs-1" class="tabbed-code" active="0">
+<div id="tabs-2" class="tabbed-code" active="0">
 
 <div class="code-tab" language="Kotlin">
 
