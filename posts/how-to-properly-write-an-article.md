@@ -43,6 +43,8 @@ public class QuotientRemainder {
 
 ### Tabbed codeblocks:
 
+<div id="tabs-1" class="tabbed-code" active="0">
+
 <div class="code-tab" language="Java">
 
 ```java
