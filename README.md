@@ -168,6 +168,34 @@ Pode-se notar acima que no FrontMatter é necessário apenas descrever o nome e 
 ...
 ```
 
+### Tabbed Codeblocks
+
+Para a adição de blocos de código agrupados em abas, foi utilizado Vanilla JavaScript, manipulando a DOM diretamente através de atributos, um `.preprend` e eventos `onclick`, então faz-se necessário que a estrutura HTML correta seja adicionada ao arquivo Markdown para alcançar o resultado desejado.
+
+O exemplo abaixo demonstra a estrutura, a qual conta com uma `div` externa contendo o atributo `active`, que define o **index** da aba ativa e o ID do grupo. O bloco de código Markdown é posicionado, por sua vez, dentro de `div's` com a classe adequada e a linguagem, sendo esta string utilizada para renderizar os nomes das abas.
+
+```markdown
+<div id="tabs-1" class="tabbed-code" active="0">
+
+<div class="code-tab" language="Java">
+
+```java
+System.out.println(&quot;Fibonacci Series till &quot; + n + &quot; terms:&quot;);
+```
+
+</div>
+
+<div class="code-tab" language="Python">
+
+```python
+if test == True
+```
+
+</div>
+
+</div>
+```
+
 ## Netlify CMS
 
 O Netlify CMS é uma ferramenta open-source desenvolvida em React.js que utiliza uma robusta API Git para possibilitar a criação de blog posts - neste caso, sem a necessidade de implementar manualmente o código.
