@@ -15,7 +15,7 @@ Os arquivos principais da raiz do projeto são:
 - `gatsby-ssr`: Injeta um script para lidar com a seleção do tema dark/light
 - `gatsby-browser`: Cria um wrapper em torno de todos os componentes, provendo acesso ao mecanismo de controle do tema
 
-## Atualizando os parâmmetros de SEO
+## Atualizando os parâmetros de SEO
 
 O Blog conta com um componente chamado SEO, localizado em `./src/components/SEO.js`, o qual é responsável por injetar as metatags necessárias no `<head>` de cada página.
 
