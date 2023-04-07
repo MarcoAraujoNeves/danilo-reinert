@@ -20,7 +20,7 @@ jonasdmkoldaskmldas
 <div class="code-tab" language="Java">
 
 ```java
-System.out.print('')
+System.out.println("");
 ```
 
 </div>
