@@ -13,8 +13,6 @@ jonasdmkoldaskmldas
 
 [link](www.google.com)
 
-
-
 ![Alt](../src/assets/images/code.jpg "Title")
 
 <div id="tabs-1" class="tabbed-code" active="0">
@@ -22,7 +20,7 @@ jonasdmkoldaskmldas
 <div class="code-tab" language="Java">
 
 ```java
-Syso.print('')
+System.out.println("");
 ```
 
 </div>
