@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: marcoaraujoneves/danilo-reinert
+  repo:  reinert/reinert.github.io
   branch: publishing
 
 publish_mode: editorial_workflow
