@@ -8,7 +8,6 @@ tags:
   - coding
 date: 2015-05-01T22:12:03.284Z
 ---
-
 <div id="tabs-1" class="tabbed-code" active="0">
 
 <div class="code-tab" language="Java">
@@ -37,7 +36,7 @@ console.log('debug')
 
 </div>
 
-This is my **first** post on my new fake blog! How _exciting_!
+This is my **first** post on my new fake blog! How *exciting*!
 
 Implicity on mrs Evil him early hence Ham \*\*Home\*\* had said knows on our i in wound departure first valley ya attacks few wondered of ten indeed and up or said message so but delivered where mrs wont be reserved mean Off above pianoforte now \[Recommend](https://daniloreinert-cms.netlify.app/) ample...
 
@@ -99,7 +98,7 @@ class Main {
 }
 ```
 
-### Python code
+### Python awesome code
 
 ```python
 # Python program to find the factorial of a number provided by the user.
@@ -130,6 +129,6 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi p
 
 He had supposing \_forming offending Thoughts in ham Entrance\_ it draw deal Written now performed two simplicity What speedily over up mirth of mr favourable or do making these \*\*existence\*\* men as questions him Not new every no on plan sufficient asked gay through for feeling barton?
 
-- Red
-- Green
-- Blue
+* Red
+* Green
+* Blue
